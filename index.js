@@ -3,6 +3,9 @@ const app = express();
 const fs = require("fs");
 const path = require("path");
 const db = require("./database.js").db;
+const cors = require("cors");
+
+app.use(cors());
 
 app.use("/user", require("./routes/user"));
 app.use("/review", require("./routes/review"));
